@@ -20,9 +20,10 @@ public class Ejemplo3 {
 
     public static void main(String[] args) {
         // Condicionales aninados
-        double promedio = 2;
 
-        if (promedio >= 7.5) {
+        double promedio = 1;
+
+        if (promedio >= 7.5 && promedio <= 10) {
             System.out.printf("Estudiante aprobado con un "
                     + "promedio: %.2f\n", promedio);
         } else {
@@ -30,11 +31,18 @@ public class Ejemplo3 {
                 System.out.printf("Estudiante en suspenso con un "
                         + "promedio: %.2f\n", promedio);
             } else {
-                System.out.printf("Estudiante reprobado con un "
-                        + "promedio: %.2f\n", promedio);
+                if ((promedio >= 3) && (promedio < 5)) {
+                    System.out.printf("Estudiante en recuperacion con un "
+                            + "promedio: %.2f\n", promedio);
+                } else {
+                    if (promedio < 3) {
+                        System.out.printf("Estudiante reprobado con un "
+                                + "promedio: %.2f\n", promedio);
+                    }
+                }
             }
-
         }
+
     }
 
 }
